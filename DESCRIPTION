@@ -15,7 +15,7 @@ BugReports: https://github.com/frbcesab/spatial-homogenization/issues
 License: GPL (>= 2)
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)
-RoxygenNote: 8.1.0
+Config/roxygen2/version: 8.1.0
 Imports:
     here,
     pak,

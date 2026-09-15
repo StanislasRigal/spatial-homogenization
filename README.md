@@ -67,8 +67,9 @@ To install this compendium:
 - [Clone](https://docs.github.com/en/repositories/creating-and-managing-repositories/cloning-a-repository)
   your fork using `git clone fork-url` (replace `fork-url` by the URL of
   your fork). Alternatively, open [RStudio
-  IDE](https://posit.co/products/open-source/rstudio/) and create a New
-  Project from Version Control.
+  IDE](https://posit.co/products/open-source/rstudio/) or
+  [Positron](https://positron.posit.co/) and create a New Project from
+  Version Control.
 
 ## Usage
 

@@ -36,7 +36,11 @@ unacceptable behavior to <nicolas.casajus@fondationbiodiversite.fr>.
 We use the [Tidyverse style guide](https://style.tidyverse.org/) for writing R 
 code. Functions are documented with the 
 [roxygen2](https://roxygen2.r-lib.org/articles/roxygen2.html) syntax. 
-`spatial-homogenization` uses the `lower_snake_case`.
+`spatial-homogenization` uses the `lower_snake_case` for function and variable names.
+
+
+**Recommendation:** You can install [**air**](https://github.com/posit-dev/air) to 
+automatically format your R code.
 
 
 
@@ -147,7 +151,7 @@ to collaborate on this project:
 this repository using the GitHub interface.
 1. [Clone](https://docs.github.com/en/repositories/creating-and-managing-repositories/cloning-a-repository) 
 your fork using `git clone fork-url` (replace `fork-url` by the URL of your fork). 
-Alternatively, open RStudio IDE and create a New Project from Version Control.
+Alternatively, open RStudio/Positron IDE and create a New Project from Version Control.
 1. Create a new branch w/ `git checkout -b branch-name` (replace `branch-name` 
 by the name of your new branch).
 1. Make your contribution (see below for examples).
@@ -174,37 +178,6 @@ rmarkdown::render("README.Rmd")
 
 
 
-#### Editing vignettes
-
-If you want to contribute by editing an existing vignette, just edit the 
-corresponding `Rmd` file stored in the `vignettes/` folder.
-
-If you want to contribute by adding a new vignette, create a new `Rmd` file in 
-the `vignettes/` folder and add the following header:
-
-```yaml
----
-title: "Vignette Title"
-output: rmarkdown::html_vignette
-vignette: >
-  %\VignetteIndexEntry{Vignette Title}
-  %\VignetteEngine{knitr::rmarkdown}
-  %\VignetteEncoding{UTF-8}
----
-```
-
-If you use a new external dependency, do not forget to add it in the `DESCRIPTION` 
-file under the section `Suggests` (only if this package is not already listed 
-under the section `Imports`).
-
-Check the integrity of the package with: 
-
-```r
-devtools::check()
-```
-
-
-
 #### Editing function documentation
 
 If you want to contribute by improving the documentation of a function, open 
@@ -221,36 +194,12 @@ If you use a new external dependency in the example section, do not forget to
 add it in the `DESCRIPTION` file under the section `Imports` (only if this 
 package is not already listed).
 
-Check the integrity of the package with: 
-
-```r
-devtools::check()
-```
-
 
 
 ### Fix bug
 
-If you want to contribute by improving the code of a function, open and edit 
-the corresponding file in the `R/` folder.
-
-Check the integrity of the package with: 
-
-```r
-devtools::check()
-```
-
-Do not forget to adapt the 
-[unit tests](https://r-pkgs.org/testing-basics.html#introducing-testthat) for 
-the function by editing the corresponding file stored in the `tests/testthat/` 
-folder. We use the package [`testthat`](https://testthat.r-lib.org/) to 
-implement unit tests.
-
-Check your tests by running:
-
-```r
-devtools::test()
-```
+If you want to contribute by improving the code of a function or a script, open 
+and edit the corresponding file in the `R/` (or `analyses/`) folder.
 
 
 
@@ -259,13 +208,11 @@ devtools::test()
 If you want to contribute by submitting a new feature, please follow this 
 workflow:
 
-1. Create a new `R` file in the folder `R/`.
-2. Implement the code of the function.
-3. Document your function w/ the [roxygen2](https://roxygen2.r-lib.org/articles/roxygen2.html) syntax.
-4. If necessary, add additional dependencies in the `DESCRIPTION` file.
-5. Update the package documentation w/ `devtools::document()`.
-6. Create a new `R` file in the folder `tests/testthat/`.
-7. Implement [unit tests](https://r-pkgs.org/testing-basics.html#introducing-testthat) for the new function.
-8. Check the integrity of the package w/ `devtools::check()`.
+1. Create a new script in the folder `analyses/`.
+2. Create new `R` files in the folder `R/` if you developed functions.
+3. Implement the code.
+4. Document your functions w/ the [roxygen2](https://roxygen2.r-lib.org/articles/roxygen2.html) syntax.
+5. If necessary, add additional dependencies in the `DESCRIPTION` file.
+6. Add a line in `make.R` to link your new script to the pipeline.
 
 **Thanks for your contribution!**
