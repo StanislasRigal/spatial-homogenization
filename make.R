@@ -3,21 +3,17 @@
 #' @description 
 #' A paragraph providing a full description of the project and describing each 
 #' step of the workflow.
-#' 
-#' @author Nicolas Casajus \email{nicolas.casajus@fondationbiodiversite.fr}
-#' 
-#' @date 2026/09/15
 
 
 
 ## Install Dependencies (listed in DESCRIPTION) ----
 
-devtools::install_deps(upgrade = "never")
+pak::local_install_deps(upgrade = "never")
 
 
 ## Load Project Addins (R Functions and Packages) ----
 
-devtools::load_all(here::here())
+pkgload::load_all()
 
 
 ## Global Variables ----

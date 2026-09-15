@@ -1,14 +1,16 @@
+
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
-# spatial-homogenization <img src="figures/readme/compendium-sticker.png" align="right" style="float:right; height:120px;"/>
+# Spatial homogenization project <img src="figures/readme/compendium-sticker.png" align="right" style="float:right; height:120px;"/>
 
 <!-- badges: start -->
 
-[![License: GPL (&gt;=
+[![License: GPL (\>=
 2)](https://img.shields.io/badge/License-GPL%20%28%3E%3D%202%29-blue.svg)](https://choosealicense.com/licenses/gpl-2.0/)
 <!-- badges: end -->
 
 <p align="left">
+
 • <a href="#overview">Overview</a><br> • <a href="#data-sources">Data
 sources</a><br> • <a href="#workflow">Workflow</a><br> •
 <a href="#content">Content</a><br> •
@@ -74,7 +76,9 @@ Launch the
 [`make.R`](https://github.com/frbcesab/spatial-homogenization/tree/main/make.R)
 file with:
 
-    source("make.R")
+``` r
+source("make.R")
+```
 
 **Notes**
 
